@@ -1,0 +1,27 @@
+{
+  "name": "be-my-friend-finder",
+  "version": "1.0.0",
+  "description": "This Application Matches People who have the Closest Compatability Score, Together.",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "inherits": "^2.0.3",
+    "window-or-global": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roverkim/Be-My-Friend-Finder.git"
+  },
+  "author": "ryan kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roverkim/Be-My-Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/roverkim/Be-My-Friend-Finder#readme"
+}

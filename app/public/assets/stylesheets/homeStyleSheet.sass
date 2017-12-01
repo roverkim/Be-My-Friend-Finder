@@ -1,0 +1,88 @@
+//Mixin for Grid Column, Rows and Area
+@mixin grid ($columns, $rows, $area)
+  grid-template-columns: $columns
+  grid-template-rows: $rows
+  grid-template-areas: $area
+
+//Center Horizontally and Vertically Using grid
+@mixin grid_Vertical_Horizontal_Center
+  justify-self: center
+  align-self: center
+
+//Center Horizontally and Vertically Using Css transform
+@mixin normal_Vertical_Horizontal_Center
+  // Remember to declare parent as postion: relative
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+//Set Height and Width to 100vh vw
+@mixin view_Height_Width
+  height: 100vh
+  width: 100vw
+
+::-webkit-scrollbar
+    display: none
+
+
+body
+  display: grid
+  @include grid($columns: 1fr, $rows: 0.5fr 0.5fr 8fr , $area: "top" "bottom" "middle")
+  max-height: 100vh
+  min-height: 100vh
+  max-width: 100vw
+  background: url('../images/homeBackground.jpg')
+  background-size: cover
+  overflow-y: hidden
+
+  #top
+    grid-area: top
+    display: grid
+    @include grid($columns: 9fr 1fr, $rows: 1fr , $area: ". dropdown")
+    background-color: grey
+    text-align: right
+    .dropdown
+      grid-area: dropdown
+      .btn
+        max-height: 100%
+        min-height: 100%
+
+  #middle
+    grid-area: middle
+    display: grid
+    @include grid($columns: 3fr 6fr 3fr, $rows: auto 1fr auto, $area: ". . ." ". imageContainer ." ". . .")
+    margin-top: 40px
+    .imageContainer
+      grid-area: imageContainer
+      position: relative
+      border: 5px black solid
+      height: 80%
+      &:hover
+        .imgMolly
+          transition: all 0.8s ease-in
+          -webkit-filter: grayscale(70%) blur(5px)
+          filter: grayscale(70%) blur(5px)
+        .goToSurvery
+          visibility: visible
+          z-index: 100
+      .imgMolly
+        height: 100%
+        width: 100%
+      .goToSurvery
+        @include normal_Vertical_Horizontal_Center
+        font-size: 2.5em
+        visibility: hidden
+        color: black
+
+  #bottom
+    grid-area: bottom
+    text-align: center
+    display: grid
+    background: rgba(255, 200, 0, 0.4)
+    .homeFooter
+      @include grid_Vertical_Horizontal_Center
+      font-family: "Segoe UI"
+      font-size: 50px
+      color: yellow
+      text-shadow: 2px 2px black

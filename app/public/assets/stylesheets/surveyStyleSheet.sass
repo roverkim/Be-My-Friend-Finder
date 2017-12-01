@@ -1,0 +1,91 @@
+//Mixin for Grid Column, Rows and Area
+@mixin grid ($columns, $rows, $area)
+  grid-template-columns: $columns
+  grid-template-rows: $rows
+  grid-template-areas: $area
+
+//Center Horizontally and Vertically Using grid
+@mixin grid_Vertical_Horizontal_Center
+  justify-self: center
+  align-self: center
+
+//Center Horizontally and Vertically Using Css transform
+@mixin normal_Vertical_Horizontal_Center
+  // Remember to declare parent as postion: relative
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+//Set Height and Width to 100vh vw
+@mixin view_Height_Width
+  height: 100vh
+  width: 100vw
+
+::-webkit-scrollbar
+    display: none
+
+
+body
+  display: grid
+  @include grid($columns: 1fr, $rows: 0.5fr 8fr , $area: "topSection" "bottomSection")
+  max-height: 100vh !important
+
+  min-height: 100vh
+  width: 100vw
+  background: url('../images/homeBackground.jpg')
+  background-size: cover
+
+  #topSection
+    grid-area: topSection
+    display: grid
+    @include grid($columns: 9fr 1fr, $rows: 1fr , $area: ". dropdown")
+    background-color: grey
+    text-align: right
+    .dropdown
+      grid-area: dropdown
+      .btn
+        max-height: 100%
+        min-height: 100%
+
+  #bottomSection
+    grid-area: bottomSection
+    display: grid
+    @include grid($columns: 1fr 5fr 1fr , $rows: 20px 1fr 20px , $area: ". . ." ". myCarousel ." ". . .")
+    #myCarousel
+      grid-area: myCarousel
+      height: 100%
+      border: 2px black solid
+      .carousel-inner
+        max-height: 100%
+        min-height: 100%
+        position: relative
+        .item , .active
+          height: 100%
+          .caroselImage
+            min-width: 100%
+            max-height: 500px
+          .form-group
+            font-size: 1.2em
+            font-weight: bold
+            h2
+              text-align: center
+              font-size: 1.8em
+            .labelMain
+              margin: 5px
+              background-color: rgba(255,255,255,0.6)
+            .labelSub
+              display: inline-block
+              font-size: 1.2em
+              margin: 20px
+              width: auto
+              border: 2px red solid
+              background-color: rgba(255,255,255,0.9)
+              text-shadow: 1px 1px yellow
+            .selectGroup
+              display: block
+              margin: 20px
+              select
+                display : inline-block
+              #submitSurvey
+                display: inline-block
