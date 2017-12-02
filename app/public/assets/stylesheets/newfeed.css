@@ -8,10 +8,22 @@
     box-sizing: border-box;
 }
 
-.marquee span {
+.marquee .slow {
     display: inline-block;
     padding-left: 100%;  /* show the marquee just outside the paragraph */
     animation: marquee 150s linear infinite;
+}
+
+.marquee .medium {
+    display: inline-block;
+    padding-left: 100%;  /* show the marquee just outside the paragraph */
+    animation: marquee 50s linear infinite;
+}
+
+.marquee .fast {
+    display: inline-block;
+    padding-left: 100%;  /* show the marquee just outside the paragraph */
+    animation: marquee 20s linear infinite;
 }
 
 .marquee span:hover {

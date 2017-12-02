@@ -1,28 +1,32 @@
 $(document).ready(function() {
-  var heart = function() {
-    $("#heartShape").animate({
-      opacity: 0.60,
-      height: "100%",
-      width: "100%"
-    }, 800, function() {
+
+  // function hearBeat(){
+    let heart = () => {
       $("#heartShape").animate({
-        opacity: 1.0,
-        height: "220%",
-        width: "100%"
-      }, 900, function() {
-        heart();
+        opacity: 0.60,
+        height: "100%",
+        width: "60%"
+      }, 800, () => {
+        $("#heartShape").animate({
+          opacity: 1.0,
+          height: "150%",
+          width: "100%"
+        }, 900, heart());
       });
-    });
-  }
-  heart();
-  var counter = 1;
-  var interval = setInterval(function() {
-    counter--;
-    if (counter == 0) {
-      clearInterval(interval);
-      // var restaurantURL = getAFMRedirectUrl('kawamilwaukee');
-      // window.location.replace(restaurantURL);
-    }
-  }, 1000);
-  interval();
+    };
+
+    let counter = 5; //Seconds
+    let interval = setInterval(() => {
+      counter--;
+      if (counter == 0) {
+        clearInterval(interval);
+        $.get("/results").done(newPath =>{
+            window.location.replace(newPath);
+         });
+      }
+    }, 1000);
+
+    heart();
+    interval();
+
 });

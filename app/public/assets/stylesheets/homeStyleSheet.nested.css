@@ -37,14 +37,14 @@ body {
       position: relative;
       border: 5px black solid;
       height: 80%; }
-      body #middle .imageContainer:hover .imgMolly {
+      body #middle .imageContainer:hover .imgHolder {
         transition: all 0.8s ease-in;
         -webkit-filter: grayscale(70%) blur(5px);
         filter: grayscale(70%) blur(5px); }
       body #middle .imageContainer:hover .goToSurvery {
         visibility: visible;
         z-index: 100; }
-      body #middle .imageContainer .imgMolly {
+      body #middle .imageContainer .imgHolder {
         height: 100%;
         width: 100%; }
       body #middle .imageContainer .goToSurvery {

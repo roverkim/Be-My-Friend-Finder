@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="app/public/assets/stylesheets/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="app/public/assets/stylesheets/homeStyleSheet.nested.css">
-        <link rel="stylesheet" href="app/public/assets/stylesheets/newfeed.css">
+    <link rel="stylesheet" href="app/public/assets/stylesheets/newfeed.css">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -21,7 +21,8 @@
   <body>
       <!-- Top Section  -->
       <div id="top">
-        <div class="marquee"><span id="feed">Text Goes Here</span></div>
+        <!-- Moving News Feed -->
+        <div class="marquee"><span class="slow" id="feed">Text Goes Here</span></div>
         <!-- Drop Down Menu Icon -->
         <div class="dropdown">
           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -31,7 +32,7 @@
           <ul class="dropdown-menu">
             <li><a href="/api/friends">API Friends List</a></li>
             <li class="divider"></li>
-            <li><a href="#">Git Hub Repo</a></li>
+            <li><a href="https://github.com/roverkim/Be-My-Friend-Finder" target="_blank">Git Hub Repo</a></li>
           </ul>
         </div>
       </div>
@@ -40,7 +41,7 @@
       <div id="middle">
         <div class="imageContainer">
           <a href="/survey">
-            <image class="imgMolly" src ="app/public/assets/images/mollyPotter.jpg" alt = "Picture of Friends"> </image>
+            <image class="imgHolder" src ="app/public/assets/images/mollyPotter.jpg" alt = "Picture of Friends"> </image>
             <div class="goToSurvery">
               <h1><i class="fa fa-list" aria-hidden="true"></i>Go To Survey</h1>
             </div>

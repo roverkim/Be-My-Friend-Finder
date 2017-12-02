@@ -11,17 +11,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="app/public/assets/stylesheets/surveyStyleSheet.nested.css">
+    <link rel="stylesheet" href="app/public/assets/stylesheets/newfeed.css">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
     <script src="app/public/assets/scripts/survey.js"></script>
+
     <title>Will You Be My Friend - Survey</title>
   </head>
 
   <body>
       <!-- Top Section  -->
       <div id="topSection">
+        <!-- Moving News Feed -->
+        <div class="marquee"><span class="medium" id="feed">Text Goes Here</span></div>
         <!-- Drop Down Menu Icon -->
         <div class="dropdown">
           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -29,9 +33,11 @@
           </button>
           <!-- Drop Down Options -->
           <ul class="dropdown-menu">
-            <li><a href="#">API Friends List</a></li>
+            <li><a href="/home">Home</a></li>
             <li class="divider"></li>
-            <li><a href="#">Git Hub Repo</a></li>
+            <li><a href="/api/friends">API Friends List</a></li>
+            <li class="divider"></li>
+            <li><a href="https://github.com/roverkim/Be-My-Friend-Finder" target="_blank">Git Hub Repo</a></li>
           </ul>
         </div>
       </div>

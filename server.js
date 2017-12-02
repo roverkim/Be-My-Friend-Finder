@@ -1,7 +1,7 @@
 /////////////////////////////////////////////// /*Require Packages*/ //////////////////////////////////////////////////////////
 const express = require("express"); // Server
 const bodyParser = require("body-parser"); // Allows for JSON Body from POST to be Accessed
-    const { StringDecoder } = require('string_decoder');
+const { StringDecoder } = require('string_decoder');
 // Initalise Express Server
 const app = express();
 
