@@ -17,11 +17,17 @@ body {
     display: grid;
     grid-template-columns: 9fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: ". dropdown";
+    grid-template-areas: "marquee dropdown";
     background-color: grey;
     text-align: right; }
+    body #top .marquee {
+      grid-area: marquee;
+      height: 100%; }
     body #top .dropdown {
       grid-area: dropdown; }
+      body #top .dropdown .dropdown-menu {
+        left: auto;
+        right: 0; }
       body #top .dropdown .btn {
         max-height: 100%;
         min-height: 100%; }
@@ -54,7 +60,10 @@ body {
         transform: translate(-50%, -50%);
         font-size: 2.5em;
         visibility: hidden;
-        color: black; }
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        width: 100%; }
   body #bottom {
     grid-area: bottom;
     text-align: center;
@@ -67,3 +76,24 @@ body {
       font-size: 50px;
       color: yellow;
       text-shadow: 2px 2px black; }
+
+@media only screen and (max-width: 1200px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 8fr;
+    grid-template-areas: "top" "bottom" "middle"; }
+    body #middle {
+      grid-template-columns: 0.01px 6fr 0.01px;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: ". . ." ". imageContainer ." ". . .";
+      margin-top: 40px;
+      grid-column-gap: 5px; }
+      body #middle .imageContainer {
+        grid-area: imageContainer;
+        position: relative;
+        border: 5px black solid;
+        height: 80%; }
+        body #middle .imageContainer .goToSurvery {
+          font-size: 1.5em; }
+    body #bottom .homeFooter {
+      font-size: 1.8em; } }

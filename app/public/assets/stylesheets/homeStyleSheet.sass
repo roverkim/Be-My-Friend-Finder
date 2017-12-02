@@ -39,11 +39,17 @@ body
   #top
     grid-area: top
     display: grid
-    @include grid($columns: 9fr 1fr, $rows: 1fr , $area: ". dropdown")
+    @include grid($columns: 9fr 1fr, $rows: 1fr , $area: "marquee dropdown")
     background-color: grey
     text-align: right
+    .marquee
+      grid-area: marquee
+      height: 100%
     .dropdown
       grid-area: dropdown
+      .dropdown-menu
+        left: auto
+        right: 0
       .btn
         max-height: 100%
         min-height: 100%
@@ -74,6 +80,9 @@ body
         font-size: 2.5em
         visibility: hidden
         color: black
+        font-weight: bold
+        text-align: center
+        width: 100%
 
   #bottom
     grid-area: bottom
@@ -86,3 +95,23 @@ body
       font-size: 50px
       color: yellow
       text-shadow: 2px 2px black
+
+
+@media only screen and (max-width: 1200px)
+  body
+    @include grid($columns: 1fr, $rows: 0.5fr 0.5fr 8fr , $area: "top" "bottom" "middle")
+    #top
+    #middle
+      @include grid($columns: 0.01px 6fr 0.01px, $rows: auto 1fr auto, $area: ". . ." ". imageContainer ." ". . .")
+      margin-top: 40px
+      grid-column-gap: 5px
+      .imageContainer
+        grid-area: imageContainer
+        position: relative
+        border: 5px black solid
+        height: 80%
+        .goToSurvery
+          font-size: 1.5em
+    #bottom
+      .homeFooter
+        font-size: 1.8em

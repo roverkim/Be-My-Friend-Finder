@@ -21,6 +21,7 @@ body
         width: 100%
         height: 150%
     #heartText
+      width: 100%
       font-family: Helvetica
       color: grey
       font-size: 2em
@@ -29,3 +30,14 @@ body
       top: 80%
       left: 50%
       transform: translate(-50%, -100%)
+
+@media only screen and (max-width: 1200px)
+  body
+    .container
+      .heartDiv
+        width: 60% !important
+        #heartShape
+          width: 100%
+          height: 150%
+      #heartText
+        font-size: 1em

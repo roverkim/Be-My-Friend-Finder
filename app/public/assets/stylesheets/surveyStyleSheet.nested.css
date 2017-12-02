@@ -32,8 +32,8 @@ body {
     grid-template-areas: ". . ." ". myCarousel ." ". . ."; }
     body #bottomSection #myCarousel {
       grid-area: myCarousel;
-      height: 100%;
-      border: 2px black solid; }
+      border: 2px black solid;
+      max-height: 800px; }
       body #bottomSection #myCarousel .carousel-inner {
         max-height: 100%;
         min-height: 100%;
@@ -48,22 +48,57 @@ body {
             font-weight: bold; }
             body #bottomSection #myCarousel .carousel-inner .item .form-group h2, body #bottomSection #myCarousel .carousel-inner .active .form-group h2 {
               text-align: center;
-              font-size: 1.8em; }
+              font-size: 2em;
+              color: black;
+              border: 1px solid black;
+              background: url();
+              background-repeat: no-repeat;
+              background-color: rgba(0, 255, 0, 0.8); }
             body #bottomSection #myCarousel .carousel-inner .item .form-group .labelMain, body #bottomSection #myCarousel .carousel-inner .active .form-group .labelMain {
               margin: 5px;
               background-color: rgba(255, 255, 255, 0.6); }
             body #bottomSection #myCarousel .carousel-inner .item .form-group .labelSub, body #bottomSection #myCarousel .carousel-inner .active .form-group .labelSub {
               display: inline-block;
-              font-size: 1.2em;
+              font-size: 1.5em;
+              font-weight: bold;
               margin: 20px;
               width: auto;
               border: 2px red solid;
-              background-color: rgba(255, 255, 255, 0.9);
-              text-shadow: 1px 1px yellow; }
+              background-color: rgba(0, 255, 0, 0.8);
+              padding: 10px; }
             body #bottomSection #myCarousel .carousel-inner .item .form-group .selectGroup, body #bottomSection #myCarousel .carousel-inner .active .form-group .selectGroup {
               display: block;
-              margin: 20px; }
-              body #bottomSection #myCarousel .carousel-inner .item .form-group .selectGroup select, body #bottomSection #myCarousel .carousel-inner .active .form-group .selectGroup select {
-                display: inline-block; }
+              margin: 20px;
+              display: inline-block;
+              border: 2px black solid; }
               body #bottomSection #myCarousel .carousel-inner .item .form-group .selectGroup #submitSurvey, body #bottomSection #myCarousel .carousel-inner .active .form-group .selectGroup #submitSurvey {
-                display: inline-block; }
+                display: block;
+                width: 100%; }
+
+@media only screen and (max-width: 1200px) {
+  body #topSection {
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". dropdown"; }
+    body #topSection .dropdown .dropdown-menu {
+      left: auto;
+      right: 0; }
+  body #bottomSection {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: ". myCarousel ."; }
+    body #bottomSection #myCarousel {
+      top: 40%;
+      transform: translateY(-50%);
+      align-content: center;
+      display: inline-block; }
+      body #bottomSection #myCarousel .carousel-inner {
+        position: relative;
+        display: inline-block; }
+        body #bottomSection #myCarousel .carousel-inner .item, body #bottomSection #myCarousel .carousel-inner .active {
+          height: 100%;
+          max-height: 500px; }
+          body #bottomSection #myCarousel .carousel-inner .item .caroselImage, body #bottomSection #myCarousel .carousel-inner .active .caroselImage {
+            min-width: 100%;
+            min-height: 100%; } }
