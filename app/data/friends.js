@@ -1,3 +1,4 @@
+// Array of Friend Objects
 let friendsArray = [
   {
     "name": "Donald",

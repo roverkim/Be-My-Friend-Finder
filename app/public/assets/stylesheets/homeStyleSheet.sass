@@ -35,6 +35,7 @@ body
   background: url('../images/homeBackground.jpg')
   background-size: cover
   overflow-y: hidden
+  position: relative
 
   #top
     grid-area: top
@@ -42,9 +43,16 @@ body
     @include grid($columns: 9fr 1fr, $rows: 1fr , $area: "marquee dropdown")
     background-color: grey
     text-align: right
+    position: relative
     .marquee
       grid-area: marquee
       height: 100%
+      #feed
+        font-size: 2.5vh
+        color: white
+        height: auto
+        line-height: 3.5vh
+
     .dropdown
       grid-area: dropdown
       .dropdown-menu

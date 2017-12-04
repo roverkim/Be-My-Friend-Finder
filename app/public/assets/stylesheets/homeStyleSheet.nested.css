@@ -11,7 +11,8 @@ body {
   max-width: 100vw;
   background: url("../images/homeBackground.jpg");
   background-size: cover;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  position: relative; }
   body #top {
     grid-area: top;
     display: grid;
@@ -19,10 +20,16 @@ body {
     grid-template-rows: 1fr;
     grid-template-areas: "marquee dropdown";
     background-color: grey;
-    text-align: right; }
+    text-align: right;
+    position: relative; }
     body #top .marquee {
       grid-area: marquee;
       height: 100%; }
+      body #top .marquee #feed {
+        font-size: 2.5vh;
+        color: white;
+        height: auto;
+        line-height: 3.5vh; }
     body #top .dropdown {
       grid-area: dropdown; }
       body #top .dropdown .dropdown-menu {
