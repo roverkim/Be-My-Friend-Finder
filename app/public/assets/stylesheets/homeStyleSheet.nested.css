@@ -16,24 +16,25 @@ body {
   body #top {
     grid-area: top;
     display: grid;
-    grid-template-columns: 9fr 1fr;
+    grid-template-columns: 9fr 40px;
     grid-template-rows: 1fr;
     grid-template-areas: "marquee dropdown";
     background-color: grey;
     text-align: right;
     position: relative;
-    max-height: 6vh;
-    min-height: 6vh; }
+    max-height: 5vh;
+    min-height: 5vh; }
     body #top .marquee {
       grid-area: marquee;
       height: 100%; }
       body #top .marquee #feed {
-        font-size: 3.5vh;
+        font-size: 2.5vh;
         color: white;
         height: auto;
         line-height: 4.5vh; }
     body #top .dropdown {
-      grid-area: dropdown; }
+      grid-area: dropdown;
+      position: relative; }
       body #top .dropdown .dropdown-menu {
         left: auto;
         right: 0; }
