@@ -28,10 +28,10 @@ body {
       grid-area: marquee;
       height: 100%; }
       body #top .marquee #feed {
-        font-size: 2.5vh;
+        font-size: 3.5vh;
         color: white;
         height: auto;
-        line-height: 3.5vh; }
+        line-height: 4.5vh; }
     body #top .dropdown {
       grid-area: dropdown; }
       body #top .dropdown .dropdown-menu {
