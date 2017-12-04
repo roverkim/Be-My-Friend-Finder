@@ -21,7 +21,9 @@ body {
     grid-template-areas: "marquee dropdown";
     background-color: grey;
     text-align: right;
-    position: relative; }
+    position: relative;
+    max-height: 6vh;
+    min-height: 6vh; }
     body #top .marquee {
       grid-area: marquee;
       height: 100%; }
